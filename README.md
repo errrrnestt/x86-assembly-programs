@@ -1,4 +1,4 @@
-# x86-assembly-program-structure
+# x86-assembly-program
 A basic x86 Assembly language project focusing on program structure, register manipulation, and step-by-step debugging in emu8086.
 # Assembly Language Labs (emu8086)
 
