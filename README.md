@@ -1,7 +1,9 @@
 # ⚡ x86 Assembly & Low-Level Computer Architecture Labs
 
-A comprehensive collection of computer architecture lab assignments. Includes standalone **16-bit 8086 Assembly** scripts for `emu8086` and **32-bit x86 C++ Inline Assembly** projects for `Visual Studio`. A collection of old university lab assignments I dug up and neatly organized for GitHub
-
+A comprehensive collection of computer architecture lab assignments. Includes standalone **16-bit 8086 Assembly** scripts for `emu8086` and **32-bit x86 C++ Inline Assembly** projects for `Visual Studio`.
+<p align="center">
+  🎓 <i>Dug up my old university computer architecture lab focusing on low-level boolean logic and Karnaugh map minimization.</i>
+</p>
 ## 📂 Repository Structure
 
 ```text
@@ -79,12 +81,6 @@ Calculates and compares identity formulas in both C++ and x86 Assembly:
 
 # ⚡ Lab 2_8: x86 Bitwise Logic & Boolean Functions
 
-<p align="center">
-  🎓 <i>Dug up my old university computer architecture lab focusing on low-level boolean logic and Karnaugh map minimization.</i>
-</p>
-
-### 📌 Overview
-
 This lab demonstrates how to evaluate 4-variable boolean functions $F(x_3, x_2, x_1, x_0)$ using minimized boolean expressions and bitwise x86 Assembly instructions (`AND`, `OR`, `NOT`). The results are verified against standard C++ logical operations across all 16 truth table input combinations.
 
 ## 🗺️ Karnaugh Maps (Minimization)
@@ -141,9 +137,6 @@ Instead of standard high-level conditional branches (`if`/`else`), the low-level
 | **13** | `1` | `1` | `0` | `1` | `1, 0, 0` | `1, 0, 0` | ✅ |
 | **14** | `1` | `1` | `1` | `0` | `0, 0, 0` | `0, 0, 0` | ✅ |
 | **15** | `1` | `1` | `1` | `1` | `0, 0, 0` | `0, 0, 0` | ✅ |
-
-
-
 
 ## 🚀 How to Run
 
