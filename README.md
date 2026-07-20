@@ -48,7 +48,7 @@ Reads two characters typed by the user, swaps them, and outputs them in reverse 
 
 ## 🛠️ Part 2: C++ & Inline x86 Assembly (`Visual Studio`)
 
-### 🔹 Lab 1: Linear Arithmetic & Overflow Checking (`lab1_8`)
+### 🔹 Lab 1_8: Linear Arithmetic & Overflow Checking (`lab1_8`)
 
 Calculates and compares identity formulas in both C++ and x86 Assembly:
 <p align="center">
@@ -82,21 +82,18 @@ Calculates and compares identity formulas in both C++ and x86 Assembly:
 
 ---
 
-# ⚡ Lab 2: x86 Bitwise Logic & Boolean Functions
+### ⚡ Lab 2_8: x86 Bitwise Logic & Boolean Functions
 
 <p align="center">
   🎓 <i>Dug up my old university computer architecture lab focusing on low-level boolean logic and Karnaugh map minimization.</i>
 </p>
 
----
-
-## 📌 Overview
+# 📌 Overview
 
 This lab demonstrates how to evaluate 4-variable boolean functions $F(x_3, x_2, x_1, x_0)$ using minimized boolean expressions and bitwise x86 Assembly instructions (`AND`, `OR`, `NOT`). The results are verified against standard C++ logical operations across all 16 truth table input combinations.
 
----
 
-## 📐 Minimized Boolean Functions
+# 📐 Minimized Boolean Functions
 
 After Karnaugh Map minimization, the three target functions are expressed as:
 
@@ -104,7 +101,6 @@ After Karnaugh Map minimization, the three target functions are expressed as:
 * **$F_2$** $= (\neg x_3 \land x_2) \lor (x_3 \land \neg x_2 \land \neg x_1)$
 * **$F_3$** $= (\neg x_3 \land x_2 \land x_1) \lor (x_3 \land \neg x_2 \land \neg x_1) \lor (x_3 \land \neg x_2 \land \neg x_0)$
 
----
 
 ## ⚙️ Assembly Implementation Details
 
@@ -114,9 +110,7 @@ Instead of standard high-level conditional branches (`if`/`else`), the low-level
 * `and reg1, reg2` — Computes logical conjunction ($\land$).
 * `or reg1, reg2` — Computes logical disjunction ($\lor$).
 
----
-
-## 📊 Complete Truth Table (16 Input Sets)
+# 📊 Complete Truth Table (16 Input Sets)
 
 | Set | $x_3$ | $x_2$ | $x_1$ | $x_0$ | C++ ($F_1, F_2, F_3$) | Assembly ($F_1, F_2, F_3$) | Match? |
 |:---:|:---:|:---:|:---:|:---:|:---------------------:|:--------------------------:|:------:|
@@ -137,10 +131,8 @@ Instead of standard high-level conditional branches (`if`/`else`), the low-level
 | **14** | `1` | `1` | `1` | `0` | `0, 0, 0` | `0, 0, 0` | ✅ |
 | **15** | `1` | `1` | `1` | `1` | `0, 0, 0` | `0, 0, 0` | ✅ |
 
----
 
 
----
 
 ## 🚀 How to Run
 
