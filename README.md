@@ -82,8 +82,63 @@ Calculates and compares identity formulas in both C++ and x86 Assembly:
 
 ---
 
-### 🔹 Lab 2: Low-Level Logic & Branching (`lab2_8`)
-Focuses on conditional jumps (`jmp`, `je`, `jne`, `jg`, `jl`), flag monitoring, and register control flow in Assembly.
+# ⚡ Lab 2: x86 Bitwise Logic & Boolean Functions
+
+<p align="center">
+  🎓 <i>Dug up my old university computer architecture lab focusing on low-level boolean logic and Karnaugh map minimization.</i>
+</p>
+
+---
+
+## 📌 Overview
+
+This lab demonstrates how to evaluate 4-variable boolean functions $F(x_3, x_2, x_1, x_0)$ using minimized boolean expressions and bitwise x86 Assembly instructions (`AND`, `OR`, `NOT`). The results are verified against standard C++ logical operations across all 16 truth table input combinations.
+
+---
+
+## 📐 Minimized Boolean Functions
+
+After Karnaugh Map minimization, the three target functions are expressed as:
+
+* **$F_1$** $= (x_3 \land \neg x_2) \lor (x_3 \land \neg x_1) \lor (\neg x_3 \land x_2 \land x_1 \land x_0)$
+* **$F_2$** $= (\neg x_3 \land x_2) \lor (x_3 \land \neg x_2 \land \neg x_1)$
+* **$F_3$** $= (\neg x_3 \land x_2 \land x_1) \lor (x_3 \land \neg x_2 \land \neg x_1) \lor (x_3 \land \neg x_2 \land \neg x_0)$
+
+---
+
+## ⚙️ Assembly Implementation Details
+
+Instead of standard high-level conditional branches (`if`/`else`), the low-level version uses 8-bit registers (`AL`, `AH`, `BL`) and bitwise instructions:
+
+* `not reg` — Inverts boolean state.
+* `and reg1, reg2` — Computes logical conjunction ($\land$).
+* `or reg1, reg2` — Computes logical disjunction ($\lor$).
+
+---
+
+## 📊 Complete Truth Table (16 Input Sets)
+
+| Set | $x_3$ | $x_2$ | $x_1$ | $x_0$ | C++ ($F_1, F_2, F_3$) | Assembly ($F_1, F_2, F_3$) | Match? |
+|:---:|:---:|:---:|:---:|:---:|:---------------------:|:--------------------------:|:------:|
+| **0**  | `0` | `0` | `0` | `0` | `0, 0, 0` | `0, 0, 0` | ✅ |
+| **1**  | `0` | `0` | `0` | `1` | `0, 0, 0` | `0, 0, 0` | ✅ |
+| **2**  | `0` | `0` | `1` | `0` | `0, 0, 0` | `0, 0, 0` | ✅ |
+| **3**  | `0` | `0` | `1` | `1` | `0, 1, 0` | `0, 1, 0` | ✅ |
+| **4**  | `0` | `1` | `0` | `0` | `0, 1, 0` | `0, 1, 0` | ✅ |
+| **5**  | `0` | `1` | `0` | `1` | `0, 1, 0` | `0, 1, 0` | ✅ |
+| **6**  | `0` | `1` | `1` | `0` | `0, 1, 1` | `0, 1, 1` | ✅ |
+| **7**  | `0` | `1` | `1` | `1` | `1, 1, 1` | `1, 1, 1` | ✅ |
+| **8**  | `1` | `0` | `0` | `0` | `1, 1, 1` | `1, 1, 1` | ✅ |
+| **9**  | `1` | `0` | `0` | `1` | `1, 1, 1` | `1, 1, 1` | ✅ |
+| **10** | `1` | `0` | `1` | `0` | `1, 0, 1` | `1, 0, 1` | ✅ |
+| **11** | `1` | `0` | `1` | `1` | `1, 0, 0` | `1, 0, 0` | ✅ |
+| **12** | `1` | `1` | `0` | `0` | `1, 0, 0` | `1, 0, 0` | ✅ |
+| **13** | `1` | `1` | `0` | `1` | `1, 0, 0` | `1, 0, 0` | ✅ |
+| **14** | `1` | `1` | `1` | `0` | `0, 0, 0` | `0, 0, 0` | ✅ |
+| **15** | `1` | `1` | `1` | `1` | `0, 0, 0` | `0, 0, 0` | ✅ |
+
+---
+
 
 ---
 
