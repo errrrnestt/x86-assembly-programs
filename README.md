@@ -51,10 +51,16 @@ Reads two characters typed by the user, swaps them, and outputs them in reverse 
 ### 🔹 Lab 1: Linear Arithmetic & Overflow Checking (`lab1_8`)
 
 Calculates and compares identity formulas in both C++ and x86 Assembly:
-$$\text{Left} = (a - b)^2 + 4ab$$
-$$\text{Right} = (a + b)^2$$
+<p align="center">
+  $$\text{Left} = (a - b)^2 + 4ab$$
+  $$\text{Right} = (a + b)^2$$
+</p>
 
-*Algebraically, both sides are identical: $(a - b)^2 + 4ab = (a + b)^2$.*
+
+*Algebraically, both sides are identical: 
+<p align="center">
+  $(a - b)^2 + 4ab = (a + b)^2$.*
+</p>
 
 #### 📊 Test Cases & Results Explained
 
